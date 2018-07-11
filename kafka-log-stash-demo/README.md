@@ -7,16 +7,9 @@
 
 | demo中配置文件 | 配置项 | 说明 |
 | --- | --- | --- |
-| agent/jaas.conf | AccessKey | 请修改为阿里云账号的AccessKey |
-| agent/jaas.conf | SecretKey | 请修改为阿里云账号的SecretKey |
 | agent/logstash.conf | bootstrap_servers | 请参考文档[获取接入点](https://help.aliyun.com/document_detail/68342.html?spm=a2c4g.11186623.6.554.X2a7Ga) |
 | agent/logstash.conf | topics | 请参考文档[创建资源](https://help.aliyun.com/document_detail/68328.html?spm=a2c4g.11186623.6.549.xvKAt6) |
 | agent/logstash.conf | group_id | 请参考文档[创建资源](https://help.aliyun.com/document_detail/68328.html?spm=a2c4g.11186623.6.549.xvKAt6) |
-| agent/logstash.conf | security_protocol | SASL_SSL，无需修改 |
-| agent/logstash.conf | sasl_mechanism | ONS，无需修改 |
-| agent/logstash.conf | jaas_path | 请修改成agent/jaas.conf的存放位置 |
-| agent/logstash.conf | ssl_truststore_location | 请修改成agent/kafka.client.truststore.jks存放的位置 |
-| agent/logstash.conf | ssl_truststore_password | KafkaOnsClient，无需修改 |
 
 
 ## 参考文档： 

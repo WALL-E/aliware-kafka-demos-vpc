@@ -7,20 +7,13 @@
          http://www.springframework.org/schema/context
          http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- 这个bean一定要放在最前面
-    <bean id="kafkaSaslConfig" class="com.aliyun.openservices.kafka.ons.KafkaSaslConfig"></bean>-->
     <!-- 定义consumer的参数 -->
     <bean id="consumerProperties" class="java.util.HashMap">
         <constructor-arg>
             <map>
                 <!--请修改为控制台获取的接入点-->
-                <entry key="bootstrap.servers" value="localhost:9092"/>
-                <!--请修改为自己的路径，最好是绝对路径
-                <entry key="ssl.truststore.location" value="{XXX,你自己的路径}/kafka.client.truststore.jks"/>
-                <entry key="ssl.truststore.password" value="KafkaOnsClient"/>
-                <entry key="security.protocol" value="SASL_SSL"/>
-                <entry key="sasl.mechanism" value="ONS"/>-->
-                <entry key="group.id" value="kafka-spring"/>
+                <entry key="bootstrap.servers" value="xxx"/>
+                <entry key="group.id" value="xxx"/>
                 <entry key="enable.auto.commit" value="true"/>
                 <entry key="auto.commit.interval.ms" value="1000"/>
                 <entry key="session.timeout.ms" value="15000"/>
@@ -44,9 +37,9 @@
     <bean id="containerProperties" class="org.springframework.kafka.listener.config.ContainerProperties">
         <constructor-arg>
             <array>
-                <!--这里可以指定多个Topic，增加value项即可
-                <value>{XXX,控制台申请的Topic1}</value>-->
-                <value>KafkaProxyTest</value>
+                <!--这里可以指定多个Topic，增加value项即可-->
+                <value>{XXX,控制台申请的Topic1}</value>
+                <value>{XXX,控制台申请的Topic1}</value>
             </array>
         </constructor-arg>
         <property name="messageListener" ref="consumerMessageListener"/>
